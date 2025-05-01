@@ -6,7 +6,7 @@
 [![JSR: @hugoalh/string-dissect](https://img.shields.io/jsr/v/@hugoalh/string-dissect?label=@hugoalh/string-dissect&labelColor=F7DF1E&logo=jsr&logoColor=000000&style=flat "JSR: @hugoalh/string-dissect")](https://jsr.io/@hugoalh/string-dissect)
 [![NPM: @hugoalh/string-dissect](https://img.shields.io/npm/v/@hugoalh/string-dissect?label=@hugoalh/string-dissect&labelColor=CB3837&logo=npm&logoColor=ffffff&style=flat "NPM: @hugoalh/string-dissect")](https://www.npmjs.com/package/@hugoalh/string-dissect)
 
-An ES (JavaScript & TypeScript) module to dissect the string; Safe with the emojis, URLs, and words.
+An ECMAScript (JavaScript & TypeScript) module to dissect the string; Safe with the emojis, URLs, and words.
 
 ## 🔰 Begin
 
