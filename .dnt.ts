@@ -43,7 +43,6 @@ await invokeDenoNodeJSTransformer({
 		scripts: {
 		},
 		engines: {
-			node: ">=20.9.0"
 		},
 		private: false,
 		publishConfig: {
