@@ -12,11 +12,6 @@ await invokeDenoNodeJSTransformer({
 	fixInjectedImports: true,
 	generateDeclarationMap: true,
 	mappings: {
-		"https://esm.sh/ansi-regex@^6.1.0": {
-			name: "ansi-regex",
-			version: "^6.1.0"
-
-		},
 		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.1.1/mod.ts": {
 			name: "@hugoalh/url-regexp",
 			version: "^0.1.1"

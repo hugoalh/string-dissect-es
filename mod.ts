@@ -1,5 +1,5 @@
 //deno-lint-ignore-file hugoalh/no-import-npm
-import regexpANSIOriginal from "https://esm.sh/ansi-regex@^6.1.0";
+import regexpANSIOriginal from "npm:ansi-regex@^6.1.0";
 import regexpURLOriginal from "https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.1.1/mod.ts";
 const regexpANSIGlobal = new RegExp(regexpANSIOriginal().source, "gu");
 const regexpEmojiExact = /^\p{Emoji}+$/v;
@@ -30,7 +30,12 @@ export interface StringDissectorOptions {
 	 */
 	safeWords?: boolean;
 }
-export type StringSegmentType = "ansi" | "character" | "emoji" | "url" | "word";
+export type StringSegmentType =
+	| "ansi"
+	| "character"
+	| "emoji"
+	| "url"
+	| "word";
 export interface StringSegmentDescriptor {
 	/**
 	 * String segment end index of the input string.
@@ -148,7 +153,12 @@ export class StringDissector {
 				yield {
 					indexEnd: cursor + segment.length,
 					indexStart: cursor,
-					type: regexpEmojiExact.test(segment) ? "emoji" : (isWordLike ? "word" : "character"),
+					type: regexpEmojiExact.test(segment)
+						? "emoji"
+						: (isWordLike
+							? "word"
+							: "character"
+						),
 					value: segment
 				};
 				cursor += segment.length;

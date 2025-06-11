@@ -6,7 +6,6 @@
 		".": "./mod.ts"
 	},
 	"imports": {
-		"https://esm.sh/ansi-regex@^6.1.0": "npm:ansi-regex@^6.1.0",
 		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.1.1/mod.ts": "jsr:@hugoalh/url-regexp@^0.1.1"
 	},
 	"publish": {
