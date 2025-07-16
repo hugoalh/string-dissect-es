@@ -1,4 +1,3 @@
-//deno-lint-ignore-file hugoalh/no-import-npm
 import regexpANSIOriginal from "npm:ansi-regex@^6.1.0";
 import regexpURLOriginal from "https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.1.1/mod.ts";
 const regexpANSIGlobal = new RegExp(regexpANSIOriginal().source, "gu");
