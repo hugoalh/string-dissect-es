@@ -76,7 +76,12 @@ An ECMAScript (JavaScript & TypeScript) module to dissect the string; Safe with 
   }
   ```
 - ```ts
-  type StringSegmentType = "ansi" | "character" | "emoji" | "url" | "word";
+  type StringSegmentType =
+    | "ansi"
+    | "character"
+    | "emoji"
+    | "url"
+    | "word";
   ```
 
 > [!NOTE]

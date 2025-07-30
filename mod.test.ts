@@ -5,16 +5,16 @@ Deno.test("1", { permissions: "none" }, () => {
 		return value;
 	}), ["Vel", " ", "ex", " ", "sit", " ", "est", " ", "sit", " ", "est", " ", "tempor", " ", "enim", " ", "et", " ", "voluptua", " ", "consetetur", " ", "gubergren", " ", "gubergren", " ", "ut", "."]);
 });
-const sample2 = "🤝💑💏👪👨‍👩‍👧‍👦👩‍👦👩‍👧‍👦🧑‍🤝‍🧑";
-Deno.test("2 Dissector", { permissions: "none" }, () => {
-	deepStrictEqual(Array.from(new StringDissector().dissect(sample2), ({ value }) => {
+Deno.test("2", { permissions: "none" }, () => {
+	const sample = "🤝💑💏👪👨‍👩‍👧‍👦👩‍👦👩‍👧‍👦🧑‍🤝‍🧑";
+	const resultDissector = Array.from(new StringDissector().dissect(sample), ({ value }) => {
 		return value;
-	}), ["🤝", "💑", "💏", "👪", "👨‍👩‍👧‍👦", "👩‍👦", "👩‍👧‍👦", "🧑‍🤝‍🧑"]);
-});
-Deno.test("2 Intl Segmenter", { permissions: "none" }, () => {
-	deepStrictEqual(Array.from(new Intl.Segmenter().segment(sample2), ({ segment }) => {
+	});
+	const resultSegmenter = Array.from(new Intl.Segmenter().segment(sample), ({ segment }) => {
 		return segment;
-	}), ["🤝", "💑", "💏", "👪", "👨‍👩‍👧‍👦", "👩‍👦", "👩‍👧‍👦", "🧑‍🤝‍🧑"]);
+	});
+	deepStrictEqual(resultDissector, ["🤝", "💑", "💏", "👪", "👨‍👩‍👧‍👦", "👩‍👦", "👩‍👧‍👦", "🧑‍🤝‍🧑"]);
+	deepStrictEqual(resultDissector, resultSegmenter);
 });
 const sample3 = "\u001B[35mThis foreground will be magenta";
 Deno.test("3 Default", { permissions: "none" }, () => {
@@ -23,9 +23,7 @@ Deno.test("3 Default", { permissions: "none" }, () => {
 	}), ["\u001B[35m", "This", " ", "foreground", " ", "will", " ", "be", " ", "magenta"]);
 });
 Deno.test("3 No Output ANSI", { permissions: "none" }, () => {
-	deepStrictEqual(Array.from(new StringDissector({
-		outputANSI: false
-	}).dissect(sample3), ({ value }) => {
+	deepStrictEqual(Array.from(new StringDissector({ outputANSI: false }).dissect(sample3), ({ value }) => {
 		return value;
 	}), ["This", " ", "foreground", " ", "will", " ", "be", " ", "magenta"]);
 });
@@ -76,9 +74,7 @@ Deno.test("12 Default", { permissions: "none" }, () => {
 	}), ["\u001B[31;46m", "Red", " ", "foreground", " ", "with", " ", "a", " ", "cyan", " ", "background", " ", "and", " ", "\u001B[1m", "bold", " ", "text", " ", "at", " ", "the", " ", "end"]);
 });
 Deno.test("12 No Output ANSI", { permissions: "none" }, () => {
-	deepStrictEqual(Array.from(new StringDissector({
-		outputANSI: false
-	}).dissect(sample12), ({ value }) => {
+	deepStrictEqual(Array.from(new StringDissector({ outputANSI: false }).dissect(sample12), ({ value }) => {
 		return value;
 	}), ["Red", " ", "foreground", " ", "with", " ", "a", " ", "cyan", " ", "background", " ", "and", " ", "bold", " ", "text", " ", "at", " ", "the", " ", "end"]);
 });

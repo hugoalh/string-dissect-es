@@ -6,7 +6,7 @@
 		".": "./mod.ts"
 	},
 	"imports": {
-		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.1.1/mod.ts": "jsr:@hugoalh/url-regexp@^0.1.1"
+		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.2.0/mod.ts": "jsr:@hugoalh/url-regexp@^0.2.0"
 	},
 	"publish": {
 		"exclude": [

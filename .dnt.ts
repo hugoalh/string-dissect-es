@@ -12,9 +12,9 @@ await invokeDenoNodeJSTransformer({
 	fixInjectedImports: true,
 	generateDeclarationMap: true,
 	mappings: {
-		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.1.1/mod.ts": {
+		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.2.0/mod.ts": {
 			name: "@hugoalh/url-regexp",
-			version: "^0.1.1"
+			version: "^0.2.0"
 		}
 	},
 	metadata: {
