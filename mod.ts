@@ -52,11 +52,11 @@ interface StringDissectorRegExpMeta {
 	regexp: RegExp;
 	type: StringSegmentType;
 }
-function* dissectorWithRegExp(matchers: StringDissectorRegExpMeta[], item: string): Generator<string | Pick<StringSegmentDescriptor, "type" | "value">> {
+function* dissectorWithRegExp(matchers: readonly StringDissectorRegExpMeta[], item: string): Generator<string | Pick<StringSegmentDescriptor, "type" | "value">> {
 	const [
 		matcher,
 		...matchersRemain
-	]: StringDissectorRegExpMeta[] = matchers;
+	]: readonly StringDissectorRegExpMeta[] = matchers;
 	let cursor: number = 0;
 	for (const match of item.matchAll(matcher.regexp)) {
 		const segmentMatch: string = match[0];
