@@ -119,7 +119,7 @@ export class StringDissector {
 	/**
 	 * Dissect the string.
 	 * @param {string} item String that need to dissect.
-	 * @returns {Generator<StringSegmentDescriptor>} An iterable descriptors from the dissected string.
+	 * @returns {Generator<StringSegmentDescriptor>} An iterable segment descriptors from the dissected string.
 	 */
 	*dissect(item: string): Generator<StringSegmentDescriptor> {
 		let cursor: number = 0;
@@ -162,7 +162,7 @@ export default StringDissector;
  * Dissect the string; Safe with the emojis, URLs, and words.
  * @param {string} item String that need to dissect.
  * @param {StringDissectorOptions} [options={}] Options.
- * @returns {Generator<StringSegmentDescriptor>} An iterable descriptors from the dissected string.
+ * @returns {Generator<StringSegmentDescriptor>} An iterable segment descriptors from the dissected string.
  */
 export function dissectString(item: string, options: StringDissectorOptions = {}): Generator<StringSegmentDescriptor> {
 	return new StringDissector(options).dissect(item);
