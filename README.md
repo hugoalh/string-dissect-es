@@ -95,49 +95,46 @@ An ECMAScript (JavaScript & TypeScript) module to dissect the string; Safe with 
   const sample1 = "Vel ex sit est sit est tempor enim et voluptua consetetur gubergren gubergren ut.";
 
   Array.from(new StringDissector().dissect(sample1));
-  /*=>
-  [
-    { value: "Vel", type: "word" },
-    { value: " ", type: "character" },
-    { value: "ex", type: "word" },
-    { value: " ", type: "character" },
-    { value: "sit", type: "word" },
-    { value: " ", type: "character" },
-    { value: "est", type: "word" },
-    { value: " ", type: "character" },
-    ... +20
-  ]
-  */
+  //=>
+  //  [
+  //    { value: "Vel", type: "word" },
+  //    { value: " ", type: "character" },
+  //    { value: "ex", type: "word" },
+  //    { value: " ", type: "character" },
+  //    { value: "sit", type: "word" },
+  //    { value: " ", type: "character" },
+  //    { value: "est", type: "word" },
+  //    { value: " ", type: "character" },
+  //    ... +20
+  //  ]
 
   Array.from(new StringDissector({ safeWords: false }).dissect(sample1));
-  /*=>
-  [
-    { value: "V", type: "character" },
-    { value: "e", type: "character" },
-    { value: "l", type: "character" },
-    { value: " ", type: "character" },
-    { value: "e", type: "character" },
-    { value: "x", type: "character" },
-    { value: " ", type: "character" },
-    { value: "s", type: "character" },
-    ... +73
-  ]
-  */
+  //=>
+  //  [
+  //    { value: "V", type: "character" },
+  //    { value: "e", type: "character" },
+  //    { value: "l", type: "character" },
+  //    { value: " ", type: "character" },
+  //    { value: "e", type: "character" },
+  //    { value: "x", type: "character" },
+  //    { value: " ", type: "character" },
+  //    { value: "s", type: "character" },
+  //    ... +73
+  //  ]
   ```
 - ```ts
   Array.from(new StringDissector().dissect("GitHub homepage is https://github.com."));
-  /*=>
-  [
-    { value: "GitHub", type: "word" },
-    { value: " ", type: "character" },
-    { value: "homepage", type: "word" },
-    { value: " ", type: "character" },
-    { value: "is", type: "word" },
-    { value: " ", type: "character" },
-    { value: "https://github.com", type: "url" },
-    { value: ".", type: "character" }
-  ]
-  */
+  //=>
+  //  [
+  //    { value: "GitHub", type: "word" },
+  //    { value: " ", type: "character" },
+  //    { value: "homepage", type: "word" },
+  //    { value: " ", type: "character" },
+  //    { value: "is", type: "word" },
+  //    { value: " ", type: "character" },
+  //    { value: "https://github.com", type: "url" },
+  //    { value: ".", type: "character" }
+  //  ]
   ```
 - ```ts
   Array.from(new StringDissector().dissect("🤝💑💏👪👨‍👩‍👧‍👦👩‍👦👩‍👧‍👦🧑‍🤝‍🧑"), ({ value }) => {
