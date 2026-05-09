@@ -4,8 +4,8 @@
 
 🔗
 [GitHub](https://github.com/hugoalh/string-dissect-es)
-[JSR](https://jsr.io/@hugoalh/string-dissect)
-[NPM](https://www.npmjs.com/package/@hugoalh/string-dissect)
+● [JSR](https://jsr.io/@hugoalh/string-dissect)
+● [NPM](https://www.npmjs.com/package/@hugoalh/string-dissect)
 
 An ECMAScript module to dissect the string; Safe with the emojis, URLs, and words.
 
