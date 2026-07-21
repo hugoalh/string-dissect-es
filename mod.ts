@@ -1,5 +1,5 @@
-import regexpANSI from "npm:ansi-regex@^6.1.0";
-import { urlRegExp as regexpURL } from "https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.2.0/mod.ts";
+import { urlRegExp } from "https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.2.1/mod.ts";
+import regexpANSI from "npm:ansi-regex@^6.2.2";
 const regexpEmojiExact = /^\p{Emoji}+$/v;
 export interface StringDissectorOptions {
 	/**
@@ -88,6 +88,9 @@ function* dissectorWithRegExp(matchers: readonly StringDissectorRegExpMeta[], it
  * String dissector to dissect the string; Safe with the emojis, URLs, and words.
  */
 export class StringDissector {
+	get [Symbol.toStringTag](): string {
+		return "StringDissector";
+	}
 	#outputANSI: boolean;
 	#regexpMatchers: StringDissectorRegExpMeta[] = [{
 		regexp: regexpANSI(),
@@ -108,7 +111,7 @@ export class StringDissector {
 		this.#outputANSI = outputANSI;
 		if (safeURLs) {
 			this.#regexpMatchers.push({
-				regexp: regexpURL({
+				regexp: urlRegExp({
 					auth: true
 				}),
 				type: "url"

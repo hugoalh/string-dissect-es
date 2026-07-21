@@ -1,13 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/denoland/deno/main/cli/schemas/config-file.v1.json",
 	"name": "@hugoalh/string-dissect",
-	"version": "4.0.2",
+	"version": "4.0.3",
 	"license": "MIT",
 	"exports": {
 		".": "./mod.ts"
 	},
 	"imports": {
-		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.2.0/mod.ts": "jsr:@hugoalh/url-regexp@^0.2.0"
+		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.2.1/mod.ts": "jsr:@hugoalh/url-regexp@^0.2.1"
 	},
 	"publish": {
 		"exclude": [
