@@ -3,7 +3,8 @@
 [**⚖️** MIT](./LICENSE.md)
 
 🔗
-[GitHub](https://github.com/hugoalh/string-dissect-es)
+[DistBoard @hugoalh](https://hugoalh.github.io/distboard/string_dissect_ecmascript)
+● [GitHub](https://github.com/hugoalh/string-dissect-es)
 ● [JSR](https://jsr.io/@hugoalh/string-dissect)
 ● [NPM](https://www.npmjs.com/package/@hugoalh/string-dissect)
 

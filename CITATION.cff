@@ -7,6 +7,7 @@ authors:
   - name: "HUGOALH"
     alias: "hugoalh"
 repository-code: "https://github.com/hugoalh/string-dissect-es"
+abstract: "An ECMAScript module to dissect the string; Safe with the emojis, URLs, and words."
 keywords:
   - "dissect"
   - "ecmascript"
