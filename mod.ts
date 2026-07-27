@@ -132,7 +132,7 @@ export class StringDissector {
 					type,
 					value
 				}: Pick<StringSegmentDescriptor, "type" | "value"> = segmentThroughRegExp;
-				if (!(!this.#outputANSI && type === "ansi")) {
+				if (!(type === "ansi" && !this.#outputANSI)) {
 					yield {
 						indexEnd: cursor + value.length,
 						indexStart: cursor,
