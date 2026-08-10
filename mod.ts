@@ -1,4 +1,4 @@
-import { urlRegExp } from "https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.2.1/mod.ts";
+import { urlRegExp } from "jsr:@hugoalh/url-regexp@^0.2.1";
 import regexpANSI from "npm:ansi-regex@^6.2.2";
 const regexpEmojiExact = /^\p{Emoji}+$/v;
 export interface StringDissectorOptions {

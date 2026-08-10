@@ -12,7 +12,7 @@ await transform({
 	entrypointsScript: manifest.exports,
 	generateDeclarationMap: true,
 	mappings: {
-		"https://raw.githubusercontent.com/hugoalh/url-regexp-es/v0.2.1/mod.ts": {
+		"jsr:@hugoalh/url-regexp@^0.2.1": {
 			name: "@hugoalh/url-regexp",
 			version: "^0.2.1"
 		}
