@@ -10,7 +10,6 @@ await transform({
 	],
 	//@ts-ignore Lazy type.
 	entrypointsScript: manifest.exports,
-	generateDeclarationMap: true,
 	mappings: {
 		"jsr:@hugoalh/url-regexp@^0.2.1": {
 			name: "@hugoalh/url-regexp",
