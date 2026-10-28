@@ -11,9 +11,9 @@ await transform({
 	//@ts-ignore Lazy type.
 	entrypointsScript: manifest.exports,
 	mappings: {
-		"jsr:@hugoalh/url-regexp@^0.2.1": {
+		"jsr:@hugoalh/url-regexp@^0.2.2": {
 			name: "@hugoalh/url-regexp",
-			version: "^0.2.1"
+			version: "^0.2.2"
 		}
 	},
 	metadata: {
