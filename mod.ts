@@ -1,6 +1,6 @@
 import { urlRegExp } from "jsr:@hugoalh/url-regexp@^0.2.2";
 import regexpANSI from "npm:ansi-regex@^6.4.0";
-const regexpEmojiExact = /^\p{Emoji}+$/v;
+const regexpEmojiExact = /^\p{RGI_Emoji}+$/v;
 export interface StringDissectorOptions {
 	/**
 	 * The locales to use in the operation. The JavaScript implementation examines locales, and then computes a locale it understands that comes closest to satisfying the expressed preference. By default, the implementation's default locale will be used.

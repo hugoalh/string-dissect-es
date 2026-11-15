@@ -83,3 +83,13 @@ Deno.test("13", { permissions: "none" }, () => {
 		return value;
 	}), ["GitHub", " ", "homepage", " ", "is", " ", "https://github.com", "."]);
 });
+Deno.test("14", { permissions: "none" }, () => {
+	deepStrictEqual(Array.from(new StringDissector().dissect("Room 101 has 3 # signs *"), (d) => {
+		return [d.value, d.type];
+	}), [["Room", "word"], [" ", "character"], ["101", "word"], [" ", "character"], ["has", "word"], [" ", "character"], ["3", "word"], [" ", "character"], ["#", "character"], [" ", "character"], ["signs", "word"], [" ", "character"], ["*", "character"]]);
+});
+Deno.test("15", { permissions: "none" }, () => {
+	deepStrictEqual(Array.from(new StringDissector().dissect("😀 👍🏽 ❤️ 👨‍👩‍👧‍👦 1️⃣"), (d) => {
+		return [d.value, d.type];
+	}), [["😀","emoji"],[" ","character"],["👍🏽","emoji"],[" ","character"],["❤️","emoji"],[" ","character"],["👨‍👩‍👧‍👦","emoji"],[" ","character"],["1️⃣","emoji"]]);
+});
