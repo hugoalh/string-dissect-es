@@ -91,5 +91,10 @@ Deno.test("14", { permissions: "none" }, () => {
 Deno.test("15", { permissions: "none" }, () => {
 	deepStrictEqual(Array.from(new StringDissector().dissect("😀 👍🏽 ❤️ 👨‍👩‍👧‍👦 1️⃣"), (d) => {
 		return [d.value, d.type];
-	}), [["😀","emoji"],[" ","character"],["👍🏽","emoji"],[" ","character"],["❤️","emoji"],[" ","character"],["👨‍👩‍👧‍👦","emoji"],[" ","character"],["1️⃣","emoji"]]);
+	}), [["😀", "emoji"], [" ", "character"], ["👍🏽", "emoji"], [" ", "character"], ["❤️", "emoji"], [" ", "character"], ["👨‍👩‍👧‍👦", "emoji"], [" ", "character"], ["1️⃣", "emoji"]]);
+});
+Deno.test("16", { permissions: "none" }, () => {
+	deepStrictEqual(Array.from(new StringDissector().dissect("😀👍🏽❤️👨‍👩‍👧‍👦1️⃣"), (d) => {
+		return [d.value, d.type];
+	}), [["😀", "emoji"], ["👍🏽", "emoji"], ["❤️", "emoji"], ["👨‍👩‍👧‍👦", "emoji"], ["1️⃣", "emoji"]]);
 });
