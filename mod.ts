@@ -1,5 +1,5 @@
 import { urlRegExp } from "jsr:@hugoalh/url-regexp@^0.2.2";
-import regexpANSI from "npm:ansi-regex@^6.4.0";
+import regexpANSI from "npm:ansi-regex@^6.6.0";
 const regexpEmojiExact = /^\p{RGI_Emoji}$/v;
 export interface StringDissectorOptions {
 	/**
